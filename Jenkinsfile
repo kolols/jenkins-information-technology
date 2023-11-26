@@ -11,10 +11,11 @@ pipeline {
         sh 'python3 test.py'
       }   
     }
-    post {
+  }
+  post {
         always {
           junit 'test-reports/*.xml'
+          cleanWs()
         }
       }
-  }
 }
