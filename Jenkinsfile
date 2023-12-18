@@ -29,6 +29,7 @@ pipeline {
                 echo $! > .pidfile
                 set +x
                 '''
+                echo 'Visit http://localhost:3000 to see your Node.js/React application in action.'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh '''
                 set -x
