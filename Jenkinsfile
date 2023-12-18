@@ -22,7 +22,7 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh 'npm run build'
-                sk '''
+                sh '''
                 set -x
                 npm start &
                 sleep 1
